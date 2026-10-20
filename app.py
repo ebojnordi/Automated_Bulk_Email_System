@@ -7,12 +7,13 @@ load_dotenv()
 
 APP_PASSWORD = os.getenv("APP_PASSWORD")
 FROM_EMAIL = os.getenv("FROM_EMAIL")
+TO_EMAIL = os.getenv("TO_EMAIL")
 
 message = EmailMessage()
 
 message["Subject"] = "Hello from Python!"
 message["From"] = FROM_EMAIL
-message["To"] = "bojnordiraha@gmail.com"
+message["To"] = TO_EMAIL
 
 message.set_content("Greetings from Python")
 
